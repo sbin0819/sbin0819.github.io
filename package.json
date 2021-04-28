@@ -1,0 +1,12 @@
+{
+  "name": "sbin0819.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:sbin0819/sbin0819.github.io.git",
+  "author": "sbin0819 <sbinha123@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-router-dom": "^5.2.0"
+  }
+}
