@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peach Peach Diary</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #ffffff;
+      --fg: #2a1a20;
+      --muted: #7a6068;
+      --accent: #e0648a;
+      --card: #fdf3f6;
+      --border: #f0dde3;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1b1216;
+        --fg: #f2e6ea;
+        --muted: #b39aa3;
+        --accent: #ff9ab6;
+        --card: #271a20;
+        --border: #3a2830;
+      }
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      line-height: 1.7;
+      padding: 2.5rem 1.25rem 4rem;
+    }
+    main { max-width: 720px; margin: 0 auto; }
+    h1 { font-size: 1.6rem; margin-bottom: 0.25rem; }
+    .subtitle { color: var(--muted); margin-bottom: 2rem; font-size: 0.95rem; }
+    h2 {
+      font-size: 1.15rem;
+      margin: 2rem 0 0.6rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+    h2:first-of-type { border-top: none; padding-top: 0; }
+    p { margin-bottom: 0.8rem; }
+    ul { margin: 0 0 0.8rem 1.4rem; }
+    li { margin-bottom: 0.3rem; }
+    .en { color: var(--muted); font-size: 0.92rem; }
+    .highlight {
+      background: var(--card);
+      border-left: 4px solid var(--accent);
+      border-radius: 6px;
+      padding: 1rem 1.2rem;
+      margin: 1.2rem 0;
+    }
+    a { color: var(--accent); }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+    .hero {
+      text-align: center;
+      padding: 2rem 0 1rem;
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
+    }
+    .tagline {
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin-bottom: 0.4rem;
+    }
+    .modes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0.9rem;
+      margin: 1rem 0 0.5rem;
+    }
+    .mode {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.1rem;
+    }
+    .mode strong { display: block; margin-bottom: 0.2rem; }
+    .mode span { color: var(--muted); font-size: 0.9rem; }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 0.5rem;
+    }
+    .links a {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.55rem 1rem;
+      text-decoration: none;
+      background: var(--card);
+    }
+  </style>
+</head>
+<body>
+<main>
+  <div class="hero">
+    <h1>Peach Peach Diary</h1>
+    <p class="tagline">카드를 모아 한 층씩 올라가는 로그라이크 덱빌딩 게임</p>
+    <p class="tagline en">A roguelike deck-building game, one floor at a time</p>
+  </div>
+
+  <h2>게임 소개 / About</h2>
+  <p>Peach Peach Diary는 카드를 모아 덱을 만들고, 층마다 갈라지는 길에서 전투와 사건을 헤쳐 나가는 싱글 플레이 로그라이크 덱빌딩 게임입니다. 매 판마다 다른 길, 다른 카드, 다른 유물이 기다립니다.</p>
+  <p class="en">Peach Peach Diary is a single-player roguelike deck-builder. Collect cards, shape your deck, and pick your path through branching floors of battles and events. Every run offers a different route, a different deck, and different artifacts.</p>
+
+  <h2>게임 모드 / Game Modes</h2>
+  <div class="modes">
+    <div class="mode">
+      <strong>일반 게임 / Normal</strong>
+      <span>기본 규칙으로 진행하는 표준 런</span>
+    </div>
+    <div class="mode">
+      <strong>챌린지 / Challenge</strong>
+      <span>특수 규칙이 적용된 어려운 런</span>
+    </div>
+    <div class="mode">
+      <strong>커스텀 / Custom</strong>
+      <span>원하는 규칙을 직접 설정</span>
+    </div>
+  </div>
+
+  <h2>특징 / Features</h2>
+  <ul>
+    <li>매번 새로 생성되는 층 구조와 분기 경로</li>
+    <li>카드·유물 조합으로 매 판 달라지는 빌드</li>
+    <li>광고 없음, 완전 오프라인 플레이</li>
+    <li>7개 언어 지원 — 한국어, 영어, 일본어, 중국어(간체), 스페인어, 프랑스어, 이탈리아어</li>
+  </ul>
+  <p class="en">Procedurally generated floors with branching routes · A different build every run through cards and artifacts · No ads, fully offline · Available in Korean, English, Japanese, Simplified Chinese, Spanish, French, and Italian.</p>
+
+  <h2>링크 / Links</h2>
+  <div class="links">
+    <a href="./support/">지원 / Support</a>
+    <a href="./privacy/">개인정보 처리방침 / Privacy</a>
+    <a href="mailto:sbinha123@gmail.com">문의 / Contact</a>
+  </div>
+
+  <footer>
+    ICARUS · sbinha123@gmail.com
+  </footer>
+</main>
+</body>
+</html>
